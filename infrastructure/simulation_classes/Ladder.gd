@@ -23,6 +23,8 @@ func affected_by(agent, _tool_object):
 
 func disable_top_support():
 	top_support.disabled = true
+	debug_info.log("ladder top support disabled", top_support.disabled)
 
 func enable_top_support():
 	top_support.disabled = false
+	debug_info.log("ladder top support disabled", top_support.disabled)

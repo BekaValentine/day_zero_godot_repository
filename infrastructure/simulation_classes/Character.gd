@@ -407,6 +407,7 @@ func climb_onto_surface():
 	climbing_ladder = false
 	self.apply_central_impulse(-linear_velocity)
 	self.gravity_scale = 1
+	# self.ladder.disable_top_support()
 	self.ladder = null
 
 func cast_stair_motion(origin : Vector3, dir : Vector3, recursive_steps : int, force_recursive_steps = false):
