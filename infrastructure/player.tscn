@@ -229,7 +229,5 @@ material = SubResource( 7 )
 [node name="overlay_layer" type="CanvasLayer" parent="."]
 layer = 4
 
-[connection signal="body_entered" from="." to="." method="body_entered"]
-[connection signal="body_exited" from="." to="." method="body_exited"]
 [connection signal="tween_all_completed" from="crouch_tween" to="." method="finished_crouching_transition"]
 [connection signal="item_selected" from="backpack" to="backpack" method="item_selected"]

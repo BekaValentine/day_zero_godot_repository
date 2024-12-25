@@ -1,0 +1,299 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://objects/road_and_sidewalk/road_10x16.tscn" type="PackedScene" id=1]
+[ext_resource path="res://objects/road_and_sidewalk/road_10x10.tscn" type="PackedScene" id=2]
+[ext_resource path="res://objects/road_and_sidewalk/road_10x10_mesh_only.tscn" type="PackedScene" id=3]
+[ext_resource path="res://objects/road_and_sidewalk/road_10x16_mesh_only.tscn" type="PackedScene" id=4]
+
+[node name="road" type="Spatial"]
+
+[node name="road_1_vertical_left" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -75, 0, 0 )
+
+[node name="road_10x10_1" parent="road_1_vertical_left" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 65 )
+
+[node name="road_10x10_2" parent="road_1_vertical_left" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 55 )
+
+[node name="road_10x10_3" parent="road_1_vertical_left" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 45 )
+
+[node name="road_10x10_4" parent="road_1_vertical_left" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 35 )
+
+[node name="road_10x10_5" parent="road_1_vertical_left" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 25 )
+
+[node name="road_10x10_6" parent="road_1_vertical_left" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 15 )
+
+[node name="road_10x10_7" parent="road_1_vertical_left" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5 )
+
+[node name="road_10x10_8" parent="road_1_vertical_left" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5 )
+
+[node name="road_10x10_9" parent="road_1_vertical_left" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -15 )
+
+[node name="road_10x10_10" parent="road_1_vertical_left" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -25 )
+
+[node name="road_10x10_11" parent="road_1_vertical_left" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -35 )
+
+[node name="road_10x10_12" parent="road_1_vertical_left" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -45 )
+
+[node name="road_10x10_13" parent="road_1_vertical_left" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -55 )
+
+[node name="road_10x10_14" parent="road_1_vertical_left" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -65 )
+
+[node name="road_10x10_15" parent="road_1_vertical_left" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 91 )
+
+[node name="road_10x10_16" parent="road_1_vertical_left" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 101 )
+
+[node name="road_10x10_17" parent="road_1_vertical_left" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 111 )
+
+[node name="road_10x10_18" parent="road_1_vertical_left" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 121 )
+
+[node name="road_10x10_19" parent="road_1_vertical_left" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 131 )
+
+[node name="road_10x10_mesh_only_1" parent="road_1_vertical_left" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, -75 )
+
+[node name="road_10x10_mesh_only_2" parent="road_1_vertical_left" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -75 )
+
+[node name="road_10x10_mesh_only_3" parent="road_1_vertical_left" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -75 )
+
+[node name="road_10x10_mesh_only_5" parent="road_1_vertical_left" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, -75 )
+
+[node name="road_10x10_mesh_only_4" parent="road_1_vertical_left" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -75 )
+
+[node name="road_10x10_mesh_only_6" parent="road_1_vertical_left" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, 141 )
+
+[node name="road_10x10_mesh_only_7" parent="road_1_vertical_left" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 141 )
+
+[node name="road_10x10_mesh_only_8" parent="road_1_vertical_left" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 141 )
+
+[node name="road_10x10_mesh_only_9" parent="road_1_vertical_left" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 141 )
+
+[node name="road_10x10_mesh_only_10" parent="road_1_vertical_left" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 141 )
+
+[node name="road_2_vertical_right" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75, 0, 0 )
+
+[node name="road_10x10_1" parent="road_2_vertical_right" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 65 )
+
+[node name="road_10x10_2" parent="road_2_vertical_right" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 55 )
+
+[node name="road_10x10_3" parent="road_2_vertical_right" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 45 )
+
+[node name="road_10x10_4" parent="road_2_vertical_right" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 35 )
+
+[node name="road_10x10_5" parent="road_2_vertical_right" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 25 )
+
+[node name="road_10x10_6" parent="road_2_vertical_right" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 15 )
+
+[node name="road_10x10_7" parent="road_2_vertical_right" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5 )
+
+[node name="road_10x10_8" parent="road_2_vertical_right" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5 )
+
+[node name="road_10x10_9" parent="road_2_vertical_right" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -15 )
+
+[node name="road_10x10_10" parent="road_2_vertical_right" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -25 )
+
+[node name="road_10x10_11" parent="road_2_vertical_right" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -35 )
+
+[node name="road_10x10_12" parent="road_2_vertical_right" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -45 )
+
+[node name="road_10x10_13" parent="road_2_vertical_right" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -55 )
+
+[node name="road_10x10_14" parent="road_2_vertical_right" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -65 )
+
+[node name="road_10x10_15" parent="road_2_vertical_right" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 91 )
+
+[node name="road_10x10_16" parent="road_2_vertical_right" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 101 )
+
+[node name="road_10x10_17" parent="road_2_vertical_right" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 111 )
+
+[node name="road_10x10_18" parent="road_2_vertical_right" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 121 )
+
+[node name="road_10x10_19" parent="road_2_vertical_right" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 131 )
+
+[node name="road_10x10_mesh_only_1" parent="road_2_vertical_right" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, -75 )
+
+[node name="road_10x10_mesh_only_2" parent="road_2_vertical_right" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -75 )
+
+[node name="road_10x10_mesh_only_3" parent="road_2_vertical_right" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -75 )
+
+[node name="road_10x10_mesh_only_5" parent="road_2_vertical_right" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, -75 )
+
+[node name="road_10x10_mesh_only_4" parent="road_2_vertical_right" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -75 )
+
+[node name="road_10x10_mesh_only_6" parent="road_2_vertical_right" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, 141 )
+
+[node name="road_10x10_mesh_only_7" parent="road_2_vertical_right" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 141 )
+
+[node name="road_10x10_mesh_only_8" parent="road_2_vertical_right" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 141 )
+
+[node name="road_10x10_mesh_only_9" parent="road_2_vertical_right" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 141 )
+
+[node name="road_10x10_mesh_only_10" parent="road_2_vertical_right" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 141 )
+
+[node name="road_3_horizontal" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 78 )
+
+[node name="road_10x16_1" parent="road_3_horizontal" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -125, 0, 0 )
+
+[node name="road_10x16_2" parent="road_3_horizontal" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -115, 0, 0 )
+
+[node name="road_10x16_3" parent="road_3_horizontal" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -105, 0, 0 )
+
+[node name="road_10x16_4" parent="road_3_horizontal" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -95, 0, 0 )
+
+[node name="road_10x16_5" parent="road_3_horizontal" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -85, 0, 0 )
+
+[node name="road_10x16_6" parent="road_3_horizontal" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -75, 0, 0 )
+
+[node name="road_10x16_7" parent="road_3_horizontal" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -65, 0, 0 )
+
+[node name="road_10x16_8" parent="road_3_horizontal" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -55, 0, 0 )
+
+[node name="road_10x16_9" parent="road_3_horizontal" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -45, 0, 0 )
+
+[node name="road_10x16_10" parent="road_3_horizontal" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -35, 0, 0 )
+
+[node name="road_10x16_11" parent="road_3_horizontal" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -25, 0, 0 )
+
+[node name="road_10x16_12" parent="road_3_horizontal" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, 0 )
+
+[node name="road_10x16_13" parent="road_3_horizontal" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 0 )
+
+[node name="road_10x16_14" parent="road_3_horizontal" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0 )
+
+[node name="road_10x16_15" parent="road_3_horizontal" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, 0 )
+
+[node name="road_10x16_16" parent="road_3_horizontal" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 25, 0, 0 )
+
+[node name="road_10x16_17" parent="road_3_horizontal" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 35, 0, 0 )
+
+[node name="road_10x16_18" parent="road_3_horizontal" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 45, 0, 0 )
+
+[node name="road_10x16_19" parent="road_3_horizontal" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 55, 0, 0 )
+
+[node name="road_10x16_20" parent="road_3_horizontal" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 65, 0, 0 )
+
+[node name="road_10x16_21" parent="road_3_horizontal" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75, 0, 0 )
+
+[node name="road_10x16_22" parent="road_3_horizontal" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 85, 0, 0 )
+
+[node name="road_10x16_23" parent="road_3_horizontal" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 95, 0, 0 )
+
+[node name="road_10x16_24" parent="road_3_horizontal" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 105, 0, 0 )
+
+[node name="road_10x16_25" parent="road_3_horizontal" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 115, 0, 0 )
+
+[node name="road_10x16_26" parent="road_3_horizontal" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 125, 0, 0 )
+
+[node name="road_10x16_mesh_only_1" parent="road_3_horizontal" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -135, 0, -32 )
+
+[node name="road_10x16_mesh_only_2" parent="road_3_horizontal" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -135, 0, -16 )
+
+[node name="road_10x16_mesh_only_3" parent="road_3_horizontal" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -135, 0, 0 )
+
+[node name="road_10x16_mesh_only_4" parent="road_3_horizontal" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -135, 0, 16 )
+
+[node name="road_10x16_mesh_only_5" parent="road_3_horizontal" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -135, 0, 32 )
+
+[node name="road_10x16_mesh_only_6" parent="road_3_horizontal" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 135, 0, -32 )
+
+[node name="road_10x16_mesh_only_7" parent="road_3_horizontal" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 135, 0, -16 )
+
+[node name="road_10x16_mesh_only_8" parent="road_3_horizontal" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 135, 0, 0 )
+
+[node name="road_10x16_mesh_only_9" parent="road_3_horizontal" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 135, 0, 16 )
+
+[node name="road_10x16_mesh_only_10" parent="road_3_horizontal" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 135, 0, 32 )

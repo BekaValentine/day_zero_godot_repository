@@ -127,7 +127,7 @@ func use_on(agent, patient):
 	patient._affected_by(agent, self)
 	return null
 
-func affected_by(agent, tool_object):
+func affected_by(_agent, _tool_object):
 	pass
 
 func focus():

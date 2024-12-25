@@ -104,7 +104,7 @@ func _integrate_forces(state):
 			return
 	on_floor = false
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	physics_activities()
 
 func physics_activities():
@@ -352,13 +352,13 @@ func try_stairs():
 	self.linear_velocity = Vector3.ZERO
 	self.gravity_scale = 0
 		
-func try_using_ladder(ladder):
+func try_using_ladder(ladder_to_try):
 	if climbing_ladder:
 		self.drop_off_ladder()
 		return
 	
-	var direction_to_bottom = ladder.bottom_reference.global_transform.origin - self.global_transform.origin
-	var direction_to_top = ladder.top_reference.global_transform.origin - self.global_transform.origin
+	var direction_to_bottom = ladder_to_try.bottom_reference.global_transform.origin - self.global_transform.origin
+	var direction_to_top = ladder_to_try.top_reference.global_transform.origin - self.global_transform.origin
 	debug_info.log("direction to bottom", direction_to_bottom)
 	debug_info.log("direction to top", direction_to_top)
 	
@@ -373,22 +373,23 @@ func try_using_ladder(ladder):
 		debug_info.log("distance to top", distance_to_top)
 		if distance_to_bottom <= distance_to_top:
 			# attach to the bottom
-			ladder_attachment_point_position = ladder.bottom_attachment_point.global_transform.origin
+			ladder_attachment_point_position = ladder_to_try.bottom_attachment_point.global_transform.origin
 
 		else:
 			# attach to the top of the ladder
-			ladder_attachment_point_position = ladder.top_attachment_point.global_transform.origin
+			ladder_attachment_point_position = ladder_to_try.top_attachment_point.global_transform.origin
 	else:
 		# we're between the two attachment points so we grab onto the ladder there
-		ladder_attachment_point_position = 0.5*(ladder.bottom_attachment_point.global_transform.origin + ladder.top_attachment_point.global_transform.origin)
+		ladder_attachment_point_position = 0.5*(ladder_to_try.bottom_attachment_point.global_transform.origin + ladder_to_try.top_attachment_point.global_transform.origin)
 		ladder_attachment_point_position.y = self.global_transform.origin.y
 
 	
 	climbing_ladder = true
 	self.linear_velocity = Vector3.ZERO
 	self.gravity_scale = 0
-	self.ladder = ladder
+	self.ladder = ladder_to_try
 	self.ladder_phase = 0
+	debug_info.log("disabling_top_support", true)
 	self.ladder.disable_top_support()
 
 func drop_off_ladder():
@@ -430,7 +431,7 @@ func cast_stair_motion(origin : Vector3, dir : Vector3, recursive_steps : int, f
 		var mid = 0.5
 		var forward
 		var hit = false
-		for i in range(recursive_steps):
+		for _i in range(recursive_steps):
 			mid = 0.5*(upper + lower)
 			forward = mid*dir
 			params.transform.origin = origin + forward

@@ -156,8 +156,9 @@ func crouching_height_change(h):
 
 func finished_crouching_transition():
 	.finished_crouching_transition()
-	# self.body_collider.shape.height = pivot.transform.origin.y + self.body_collider.shape.radius
-	# self.body_collider.translation.y = self.body_collider.shape.height/2
+	var true_height = pivot.transform.origin.y + self.body_collider.shape.radius
+	self.body_collider.shape.height = true_height - 2*self.body_collider.shape.radius
+	self.body_collider.translation.y = true_height/2
 
 func pickup_object():
 	hold_object(highlighted_object)
