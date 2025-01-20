@@ -1,6 +1,7 @@
 extends Node
 
-var current_scene = "res://infrastructure/menus/main_menu.tscn"
+var current_scene = "res://levels/main_menu/main_menu.tscn"
+# "res://infrastructure/menus/main_menu.tscn"
 
 func _ready():
 	randomize()
@@ -13,7 +14,7 @@ func reload_scene():
 	goto_scene(current_scene)
 
 func goto_main_menu():
-	goto_scene("res://infrastructure/menus/main_menu.tscn")
+	goto_scene("res://levels/main_menu/main_menu.tscn")
 
 func goto_prototypes_menu():
 	goto_scene("res://infrastructure/menus/prototypes_menu.tscn")

@@ -1,0 +1,35 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://levels/main_menu/models/skyline/skyline.tscn" type="PackedScene" id=1]
+
+[node name="multiskyline" type="Spatial"]
+
+[node name="skyline" parent="." instance=ExtResource( 1 )]
+transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, -54.4232, -3.05176e-05, 87.8163 )
+
+[node name="skyline2" parent="." instance=ExtResource( 1 )]
+transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, 220.266, -4.57764e-05, -33.1907 )
+
+[node name="skyline7" parent="." instance=ExtResource( 1 )]
+transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, 114.308, -4.57764e-05, -4.38974 )
+
+[node name="skyline3" parent="." instance=ExtResource( 1 )]
+transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, 50.7228, -1.52588e-05, -79.6577 )
+
+[node name="skyline6" parent="." instance=ExtResource( 1 )]
+transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, 0.620556, -1.52588e-05, 2.55127 )
+
+[node name="skyline4" parent="." instance=ExtResource( 1 )]
+transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, -114.659, 1.52588e-05, -46.5817 )
+
+[node name="skyline5" parent="." instance=ExtResource( 1 )]
+transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, -222.463, 1.52588e-05, 8.54626 )
+
+[node name="skyline8" parent="." instance=ExtResource( 1 )]
+transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, -126.451, 4.57763e-05, 40.1263 )
+
+[node name="skyline9" parent="." instance=ExtResource( 1 )]
+transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, -234.93, 1.52588e-05, -91.3247 )
+
+[node name="skyline10" parent="." instance=ExtResource( 1 )]
+transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, -3.97015, 4.57763e-05, -9.07172 )

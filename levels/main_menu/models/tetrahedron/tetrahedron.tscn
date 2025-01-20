@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://levels/main_menu/models/tetrahedron/tetrahedron.glb" type="PackedScene" id=1]
+
+[node name="tetrahedron" instance=ExtResource( 1 )]

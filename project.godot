@@ -171,7 +171,8 @@ _global_script_class_icons={
 [application]
 
 config/name="Day Zero"
-run/main_scene="res://infrastructure/menus/main_menu.tscn"
+run/main_scene="res://levels/main_menu/main_menu.tscn"
+boot_splash/show_image=false
 boot_splash/bg_color=Color( 0, 0, 0, 1 )
 config/icon="res://icon.png"
 
@@ -182,13 +183,17 @@ debug_info="*res://infrastructure/DebugInfo.tscn"
 
 [display]
 
-window/size/width=1920
-window/size/height=1080
+window/size/width=1600
+window/size/height=900
 window/size/resizable=false
 window/size/borderless=true
 window/size/fullscreen=true
 window/stretch/mode="viewport"
 window/stretch/aspect="keep"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "res://addons/building_tile/plugin.cfg" )
 
 [gdnative]
 
@@ -328,5 +333,6 @@ vram_compression/import_etc=true
 vram_compression/import_etc2=false
 quality/shadow_atlas/quadrant_1_subdiv=1
 quality/shadows/filter_mode=2
+quality/filters/use_nearest_mipmap_filter=true
 quality/filters/msaa=1
-environment/default_environment="res://environments/default_env.tres"
+environment/default_environment="res://environments/editor_environment.tres"

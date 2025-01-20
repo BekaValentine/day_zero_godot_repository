@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://models/buildings/bauhaus_building/ground_floor/base_model/back_door.gltf" type="PackedScene" id=1]
+
+[node name="back_door" type="Spatial"]
+
+[node name="back_door" type="Spatial" parent="." instance=ExtResource( 1 )]

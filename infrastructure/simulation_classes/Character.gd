@@ -4,7 +4,7 @@ extends RigidBody
 export var fall_limit = -100
 export var gravity = -9.8
 export var jump_speed = 3.0
-export var run_speed = 5.0
+export var run_speed = 10.0
 export var walk_speed = 1.5
 export var air_speed = 0.1
 export var push_force = 1

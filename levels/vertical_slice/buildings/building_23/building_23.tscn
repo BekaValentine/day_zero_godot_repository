@@ -1,0 +1,103 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://levels/vertical_slice/buildings/building_23/ground_floor.tscn" type="PackedScene" id=1]
+[ext_resource path="res://levels/vertical_slice/buildings/building_23/middle_floor.tscn" type="PackedScene" id=2]
+[ext_resource path="res://levels/vertical_slice/buildings/building_23/roof_floor.tscn" type="PackedScene" id=3]
+
+[node name="building_23" type="Spatial"]
+
+[node name="ground_floor" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, -15 )
+
+[node name="middle_floor_1" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 9, -15 )
+
+[node name="middle_floor_2" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 12, -15 )
+
+[node name="middle_floor_3" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 15, -15 )
+
+[node name="middle_floor_4" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 18, -15 )
+
+[node name="middle_floor_5" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 21, -15 )
+
+[node name="middle_floor_6" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 24, -15 )
+
+[node name="middle_floor_7" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 27, -15 )
+
+[node name="middle_floor_8" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 30, -15 )
+
+[node name="middle_floor_9" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 33, -15 )
+
+[node name="middle_floor_10" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 36, -15 )
+
+[node name="middle_floor_11" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 39, -15 )
+
+[node name="middle_floor_12" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 42, -15 )
+
+[node name="middle_floor_13" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 45, -15 )
+
+[node name="middle_floor_14" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 48, -15 )
+
+[node name="middle_floor_15" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 51, -15 )
+
+[node name="middle_floor_16" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 54, -15 )
+
+[node name="middle_floor_17" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 57, -15 )
+
+[node name="middle_floor_18" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 60, -15 )
+
+[node name="middle_floor_19" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 63, -15 )
+
+[node name="middle_floor_20" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 66, -15 )
+
+[node name="middle_floor_21" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 69, -15 )
+
+[node name="middle_floor_22" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 72, -15 )
+
+[node name="middle_floor_23" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 75, -15 )
+
+[node name="middle_floor_24" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 78, -15 )
+
+[node name="middle_floor_25" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 81, -15 )
+
+[node name="middle_floor_26" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 84, -15 )
+
+[node name="middle_floor_27" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 87, -15 )
+
+[node name="middle_floor_28" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 90, -15 )
+
+[node name="middle_floor_29" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 93, -15 )
+
+[node name="middle_floor_30" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 96, -15 )
+
+[node name="roof_floor" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 99, -15 )

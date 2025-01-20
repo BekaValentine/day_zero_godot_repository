@@ -1,0 +1,52 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://objects/buildings/office_building_1/middle_floor/left_edge.tscn" type="PackedScene" id=1]
+[ext_resource path="res://objects/buildings/office_building_1/middle_floor/right_edge.tscn" type="PackedScene" id=2]
+[ext_resource path="res://objects/buildings/office_building_1/middle_floor/corner.tscn" type="PackedScene" id=3]
+[ext_resource path="res://objects/buildings/office_building_1/middle_floor/middle.tscn" type="PackedScene" id=4]
+[ext_resource path="res://objects/buildings/office_building_1/middle_floor/back_middle.tscn" type="PackedScene" id=5]
+[ext_resource path="res://objects/buildings/office_building_1/middle_floor/back_corner.tscn" type="PackedScene" id=6]
+
+[node name="middle_floor" type="Spatial"]
+
+[node name="corner" parent="." instance=ExtResource( 3 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 10, 0, -12.5 )
+
+[node name="middle_1" parent="." instance=ExtResource( 4 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 10, 0, -2.5 )
+
+[node name="middle_2" parent="." instance=ExtResource( 4 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 10, 0, 2.5 )
+
+[node name="middle_3" parent="." instance=ExtResource( 4 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 10, 0, 7.5 )
+
+[node name="middle_4" parent="." instance=ExtResource( 4 )]
+transform = Transform( -1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, -1, 5, 0, -12.5 )
+
+[node name="middle_5" parent="." instance=ExtResource( 4 )]
+transform = Transform( -1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, -1, 0, 0, -12.5 )
+
+[node name="left_edge" parent="." instance=ExtResource( 1 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 10, 0, 12.5 )
+
+[node name="right_edge" parent="." instance=ExtResource( 2 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -5, 0, -12.5 )
+
+[node name="back_middle_1" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 12.5 )
+
+[node name="back_middle_2" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 12.5 )
+
+[node name="back_middle_3" parent="." instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -10, 0, -7.5 )
+
+[node name="back_middle_4" parent="." instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -10, 0, -2.5 )
+
+[node name="back_middle_5" parent="." instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -10, 0, 2.5 )
+
+[node name="back_corner" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 12.5 )

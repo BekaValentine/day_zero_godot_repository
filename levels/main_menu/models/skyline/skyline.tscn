@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://levels/main_menu/models/skyline/skyline.glb" type="PackedScene" id=1]
+
+[node name="skyline" instance=ExtResource( 1 )]

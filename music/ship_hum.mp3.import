@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ship_hum.mp3-4deeddc23cdfe1f4bba3637600626a11.mp3str"
+
+[deps]
+
+source_file="res://music/ship_hum.mp3"
+dest_files=[ "res://.import/ship_hum.mp3-4deeddc23cdfe1f4bba3637600626a11.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

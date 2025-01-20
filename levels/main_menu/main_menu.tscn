@@ -1,0 +1,1059 @@
+[gd_scene load_steps=56 format=2]
+
+[ext_resource path="res://levels/main_menu/objects/tunnel.tscn" type="PackedScene" id=1]
+[ext_resource path="res://levels/main_menu/objects/tetrahedron.tscn" type="PackedScene" id=2]
+[ext_resource path="res://levels/main_menu/objects/tower.tscn" type="PackedScene" id=3]
+[ext_resource path="res://levels/main_menu/objects/multiskyline.tscn" type="PackedScene" id=4]
+[ext_resource path="res://levels/main_menu/objects/cube_train.tscn" type="PackedScene" id=5]
+[ext_resource path="res://levels/main_menu/objects/light_tube_train.tscn" type="PackedScene" id=6]
+[ext_resource path="res://levels/main_menu/models/double_pyramid/double_pyramid.tscn" type="PackedScene" id=7]
+[ext_resource path="res://levels/main_menu/objects/light_tube_train_wide_separation.tscn" type="PackedScene" id=8]
+[ext_resource path="res://levels/main_menu/objects/double_pyramids_18.tscn" type="PackedScene" id=9]
+[ext_resource path="res://fonts/cutive_mono_48.tres" type="DynamicFont" id=10]
+[ext_resource path="res://levels/main_menu/models/menu_text/main_menu.tres" type="Material" id=11]
+[ext_resource path="res://levels/main_menu/main_menu.gd" type="Script" id=12]
+[ext_resource path="res://levels/main_menu/models/menu_text/menu_text.jpg" type="Texture" id=13]
+[ext_resource path="res://levels/main_menu/models/menu_text/menu_text_normal.jpg" type="Texture" id=14]
+[ext_resource path="res://music/main_menu_theme.mp3" type="AudioStream" id=15]
+[ext_resource path="res://levels/main_menu/models/diamond_tunnel/diamond_tunnel.tscn" type="PackedScene" id=16]
+[ext_resource path="res://music/ship_hum.mp3" type="AudioStream" id=17]
+
+[sub_resource type="Animation" id=2]
+resource_name = "camera"
+length = 2.0
+step = 0.0333333
+tracks/0/type = "value"
+tracks/0/path = NodePath("Camera:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.99, 1.98 ),
+"transitions": PoolRealArray( 1, 0.225313, 0.225313 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 5 ), Vector3( 0, 0, -50 ), Vector3( 0, 0, -60 ) ]
+}
+
+[sub_resource type="PlaneMesh" id=37]
+size = Vector2( 1.5, 1.5 )
+
+[sub_resource type="SpatialMaterial" id=38]
+render_priority = 1
+flags_transparent = true
+flags_unshaded = true
+albedo_color = Color( 1, 1, 1, 0 )
+
+[sub_resource type="Animation" id=40]
+resource_name = "wash"
+step = 0.0333333
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("CSGMesh:material:albedo_color:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.99 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("CSGMesh:material:albedo_color:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.99 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("CSGMesh:material:albedo_color:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.99 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("CSGMesh:material:albedo_color:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.99 )
+}
+
+[sub_resource type="Environment" id=1]
+background_mode = 1
+background_color = Color( 0.0784314, 0.0862745, 0.133333, 1 )
+background_energy = 0.0
+ambient_light_energy = 0.0
+ambient_light_sky_contribution = 0.0
+fog_enabled = true
+fog_color = Color( 0.0823529, 0.101961, 0.219608, 1 )
+fog_depth_begin = 214.0
+fog_depth_end = 896.7
+dof_blur_far_distance = 200.0
+dof_blur_far_transition = 100.0
+dof_blur_far_amount = 0.05
+glow_intensity = 0.11
+glow_bloom = 0.17
+
+[sub_resource type="Animation" id=4]
+resource_name = "tunnel2"
+length = 80.0
+loop = true
+step = 0.0333333
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.264, 5.016, 40 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 31.529, -20, 500 ), Vector3( 31.529, -20, 23.517 ), Vector3( 31.529, -20, -700 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "tunnel2"
+length = 200.0
+loop = true
+step = 0.0333333
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.66, 35.277, 159.984 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 7, 7, 1000 ), Vector3( 7, 7, 23.517 ), Vector3( 7, 7, -700 ) ]
+}
+
+[sub_resource type="Animation" id=50]
+resource_name = "diamond_tunnel"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 5, 5.6, 9.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, -1000 ), Vector3( 0, 0, -1000 ), Vector3( 0, 0, -430 ), Vector3( 0, 0, -50 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "cube_train"
+length = 293.0
+loop = true
+step = 0.0333333
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 180.213 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( -20, -50, -150 ), Vector3( -20, 150, -150 ) ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "cube_train"
+length = 47.0
+loop = true
+step = 0.0333333
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 9.966, 34.584 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( -15, -50, -100 ), Vector3( -15, 120, -100 ) ]
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "cube_train"
+length = 27.0
+loop = true
+step = 0.0333333
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 10.527, 26.565 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 15, 120, -100 ), Vector3( 15, -100, -100 ) ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "sweep"
+length = 120.0
+loop = true
+step = 0.0333333
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 57.75, 119.625 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 433.182, -120, 167.455 ), Vector3( -693.269, -120, 167.455 ), Vector3( 400.378, -120, 167.455 ) ]
+}
+
+[sub_resource type="Animation" id=10]
+resource_name = "sweep"
+length = 83.0
+loop = true
+step = 0.0333333
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 39.633, 82.467 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 379.495, -57.2872, 1.53326 ), Vector3( -475.835, -57.2872, 1.53326 ), Vector3( 379.495, -57.2872, 1.53326 ) ]
+}
+
+[sub_resource type="Animation" id=11]
+resource_name = "sweep"
+length = 67.0
+loop = true
+step = 0.0333333
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 25.311, 43.956, 62.172 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( -20, 140, 401.423 ), Vector3( -20, 140, -480.187 ), Vector3( -20, 140, 401.423 ) ]
+}
+
+[sub_resource type="Animation" id=12]
+resource_name = "sweep"
+length = 53.0
+loop = true
+step = 0.0333333
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 8.085, 26.73, 44.781 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( -150, 140, 401.423 ), Vector3( -150, 140, -480.187 ), Vector3( -150, 140, 401.423 ) ]
+}
+
+[sub_resource type="Animation" id=13]
+resource_name = "sweep"
+length = 37.0
+loop = true
+step = 0.0333333
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.231, 18.876, 36.927 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 150, 140, 401.423 ), Vector3( 150, 140, -480.187 ), Vector3( 150, 140, 401.423 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "twirl"
+length = 40.0
+loop = true
+step = 0.0333333
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 30 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( -14.266, 2.7141e-07, -32.417 ), Vector3( -14.266, 360, -32.417 ) ]
+}
+
+[sub_resource type="Animation" id=14]
+resource_name = "light_tube_train"
+loop = true
+step = 0.0333333
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.99 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 10.747, -30, -75 ), Vector3( 10.747, -29.5, -75 ) ]
+}
+
+[sub_resource type="Animation" id=15]
+resource_name = "light_tube_train"
+loop = true
+step = 0.0333333
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.99 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( -15, -23.863, -110 ), Vector3( -15, -23.363, -110 ) ]
+}
+
+[sub_resource type="Animation" id=16]
+resource_name = "light_tube_train"
+length = 2.0
+loop = true
+step = 0.0333333
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 3.77567, -3.067, -30 ), Vector3( 3.776, -3.067, -32.5 ) ]
+}
+
+[sub_resource type="Animation" id=17]
+resource_name = "light_tube_train"
+length = 2.0
+loop = true
+step = 0.0333333
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( -0.291, -5.067, -30 ), Vector3( -0.291, -5.067, -32.5 ) ]
+}
+
+[sub_resource type="Animation" id=18]
+resource_name = "light_tube_train"
+length = 2.0
+loop = true
+step = 0.0333333
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.98 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( -3.5842, 6.27128, -30 ), Vector3( -3.584, 6.271, -32.5 ) ]
+}
+
+[sub_resource type="Animation" id=19]
+resource_name = "light_tube_train"
+length = 2.0
+loop = true
+step = 0.0333333
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 13, 6.271, -30 ), Vector3( 13, 6.271, -32.5 ) ]
+}
+
+[sub_resource type="Animation" id=26]
+resource_name = "light_tube_train"
+length = 4.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("light_tube_train_wide_separation:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 70.451, 6.271, -94.481 ), Vector3( 67.451, 6.271, -94.481 ) ]
+}
+
+[sub_resource type="Animation" id=25]
+resource_name = "light_tube_train"
+length = 4.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("light_tube_train_wide_separation:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 70.451, 6.271, -81.685 ), Vector3( 67.451, 6.271, -81.685 ) ]
+}
+
+[sub_resource type="Animation" id=30]
+resource_name = "light_tube_train"
+length = 4.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("light_tube_train_wide_separation:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 70.451, 6.271, -81.685 ), Vector3( 67.451, 6.271, -81.685 ) ]
+}
+
+[sub_resource type="Animation" id=27]
+resource_name = "light_tube_train"
+length = 4.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("light_tube_train_wide_separation:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 70.451, 6.271, -124.161 ), Vector3( 67.451, 6.271, -124.161 ) ]
+}
+
+[sub_resource type="Animation" id=28]
+resource_name = "light_tube_train"
+length = 4.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("light_tube_train_wide_separation:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 66.133, -6.231, -81.685 ), Vector3( 63.133, -6.231, -81.685 ) ]
+}
+
+[sub_resource type="Animation" id=29]
+resource_name = "light_tube_train"
+length = 4.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("light_tube_train_wide_separation:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 56.133, -12.431, -124.161 ), Vector3( 53.133, -12.431, -124.161 ) ]
+}
+
+[sub_resource type="TextMesh" id=31]
+material = ExtResource( 11 )
+text = "day.0"
+font = ExtResource( 10 )
+
+[sub_resource type="TextMesh" id=35]
+material = ExtResource( 11 )
+text = "day.0"
+font = ExtResource( 10 )
+depth = 0.01
+
+[sub_resource type="Animation" id=36]
+resource_name = "menu_lights"
+length = 4.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2, 4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, -39.908 ), Vector3( 0, 0, 26.016 ), Vector3( 0, 0, -39.908 ) ]
+}
+
+[sub_resource type="TextMesh" id=33]
+text = "vertical slice"
+font = ExtResource( 10 )
+
+[sub_resource type="SpatialMaterial" id=43]
+albedo_color = Color( 1, 0.862745, 0.992157, 1 )
+albedo_texture = ExtResource( 13 )
+normal_enabled = true
+normal_scale = 2.0
+normal_texture = ExtResource( 14 )
+
+[sub_resource type="BoxShape" id=41]
+extents = Vector3( 0.533966, 0.05, 0.0258544 )
+
+[sub_resource type="TextMesh" id=34]
+text = "exit"
+font = ExtResource( 10 )
+
+[sub_resource type="SpatialMaterial" id=44]
+albedo_color = Color( 1, 0.862745, 0.992157, 1 )
+albedo_texture = ExtResource( 13 )
+normal_enabled = true
+normal_scale = 2.0
+normal_texture = ExtResource( 14 )
+
+[sub_resource type="BoxShape" id=42]
+extents = Vector3( 0.157, 0.05, 0.026 )
+
+[node name="main_menu" type="Spatial"]
+script = ExtResource( 12 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5 )
+fov = 50.0
+far = 2000.0
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Camera"]
+stream = ExtResource( 15 )
+attenuation_model = 3
+unit_db = -20.0
+autoplay = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Camera"]
+root_node = NodePath("../..")
+autoplay = "camera"
+anims/camera = SubResource( 2 )
+
+[node name="wash" type="Spatial" parent="Camera"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.45161 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Camera/wash"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0.67173 )
+mesh = SubResource( 37 )
+material = SubResource( 38 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Camera/wash"]
+autoplay = "wash"
+anims/wash = SubResource( 40 )
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 1 )
+
+[node name="tetrahedron" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22.6376, 7.62118, -98.2062 )
+
+[node name="tunnel" parent="." instance=ExtResource( 1 )]
+
+[node name="tunnel2" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 31.529, -20, 10.0604 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="tunnel2"]
+autoplay = "tunnel2"
+anims/tunnel2 = SubResource( 4 )
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="tunnel2"]
+stream = ExtResource( 17 )
+unit_db = 10.0
+autoplay = true
+
+[node name="tunnel3" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 7, -183.52 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="tunnel3"]
+autoplay = "tunnel2"
+anims/tunnel2 = SubResource( 5 )
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="tunnel3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -36.3901 )
+stream = ExtResource( 17 )
+unit_db = 15.0
+autoplay = true
+
+[node name="tunnel_3_light_1" type="SpotLight" parent="."]
+transform = Transform( -0.956453, 0.145944, 0.252782, -2.18557e-08, 0.866025, -0.5, -0.291888, -0.478226, -0.828312, 2.02247, 0, -73.7061 )
+light_color = Color( 0.0862745, 0.505882, 0.498039, 1 )
+light_energy = 1.5
+spot_range = 12.9818
+spot_angle = 41.7996
+
+[node name="tunnel_3_light_2" type="SpotLight" parent="."]
+transform = Transform( -0.956453, 0.145944, 0.252782, -2.18557e-08, 0.866025, -0.5, -0.291888, -0.478226, -0.828312, 2.02247, 0, -86.9 )
+light_color = Color( 0.0862745, 0.505882, 0.498039, 1 )
+light_energy = 1.5
+spot_range = 12.9818
+spot_angle = 41.7996
+
+[node name="diamond_tunnel" parent="." instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1000 )
+visible = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="diamond_tunnel"]
+autoplay = "diamond_tunnel"
+anims/diamond_tunnel = SubResource( 50 )
+
+[node name="tower" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.31117, 0.632336, -68.0577 )
+
+[node name="cube_train" parent="." instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, -20, -4.08631, -150 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="cube_train"]
+autoplay = "cube_train"
+anims/cube_train = SubResource( 6 )
+
+[node name="cube_train2" parent="." instance=ExtResource( 5 )]
+transform = Transform( -1.74846e-07, -4, -4.37114e-08, 0, -1.74846e-07, 1, -4, 1.74846e-07, 1.91069e-15, -15, 12.0523, -100 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="cube_train2"]
+autoplay = "cube_train"
+anims/cube_train = SubResource( 7 )
+
+[node name="cube_train3" parent="." instance=ExtResource( 5 )]
+transform = Transform( -1.31134e-07, -1, -4.37114e-08, 0, -4.37114e-08, 1, -3, 4.37114e-08, 1.91069e-15, 15, 120, -100 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="cube_train3"]
+autoplay = "cube_train"
+anims/cube_train = SubResource( 8 )
+
+[node name="skylines" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.81738, 0, -511.475 )
+
+[node name="multiskyline" parent="skylines" instance=ExtResource( 4 )]
+transform = Transform( 2, 0, 0, 0, 3, 0, 0, 0, 1, 34.902, -119.844, -7.31601 )
+
+[node name="multiskyline2" parent="skylines" instance=ExtResource( 4 )]
+transform = Transform( -0.5, 0, -7.54979e-08, 0, 0.5, 0, 7.54979e-08, 0, -0.5, 161.816, -119.844, 183.809 )
+
+[node name="multiskyline3" parent="skylines" instance=ExtResource( 4 )]
+transform = Transform( -0.5, 0, -7.54979e-08, 0, 0.5, 0, 7.54979e-08, 0, -0.5, -166.156, -119.844, 183.809 )
+
+[node name="multiskyline4" parent="skylines" instance=ExtResource( 4 )]
+transform = Transform( 2, 0, 0, 0, 3, 0, 0, 0, 1, 34.902, 160.992, -7.31601 )
+
+[node name="multiskyline5" parent="skylines" instance=ExtResource( 4 )]
+transform = Transform( -0.5, 0, -7.54979e-08, 0, 0.5, 0, 7.54979e-08, 0, -0.5, 161.816, 160.992, 183.809 )
+
+[node name="multiskyline6" parent="skylines" instance=ExtResource( 4 )]
+transform = Transform( -0.5, 0, -7.54979e-08, 0, 0.5, 0, 7.54979e-08, 0, -0.5, -166.156, 160.992, 183.809 )
+
+[node name="OmniLight" type="OmniLight" parent="skylines"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 128.043, -22.7963, 120.342 )
+light_color = Color( 1, 0.784314, 0.905882, 1 )
+omni_range = 223.766
+
+[node name="OmniLight2" type="OmniLight" parent="skylines"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -90.5883, 15.0582, 125.097 )
+light_color = Color( 1, 0.784314, 0.905882, 1 )
+omni_range = 264.185
+
+[node name="OmniLight3" type="OmniLight" parent="skylines"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 433.182, -120, 167.455 )
+light_energy = 10.0
+omni_range = 20.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="skylines/OmniLight3"]
+autoplay = "sweep"
+anims/sweep = SubResource( 9 )
+
+[node name="OmniLight3" type="OmniLight" parent="skylines/OmniLight3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 50.0034, 0, 0 )
+light_energy = 10.0
+omni_range = 20.0
+
+[node name="OmniLight4" type="OmniLight" parent="skylines/OmniLight3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 93.8096, 0, 0 )
+light_energy = 10.0
+omni_range = 20.0
+
+[node name="OmniLight4" type="OmniLight" parent="skylines"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -109.68, -57.2872, 1.53326 )
+light_energy = 10.0
+omni_range = 20.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="skylines/OmniLight4"]
+autoplay = "sweep"
+anims/sweep = SubResource( 10 )
+
+[node name="OmniLight3" type="OmniLight" parent="skylines/OmniLight4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 50.0034, 0, 0 )
+light_energy = 10.0
+omni_range = 20.0
+
+[node name="OmniLight4" type="OmniLight" parent="skylines/OmniLight4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 93.8096, 0, 0 )
+light_energy = 10.0
+omni_range = 20.0
+
+[node name="OmniLight5" type="OmniLight" parent="skylines"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -20, 150, 51.4111 )
+light_energy = 10.0
+omni_range = 20.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="skylines/OmniLight5"]
+autoplay = "sweep"
+anims/sweep = SubResource( 11 )
+
+[node name="OmniLight3" type="OmniLight" parent="skylines/OmniLight5"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 50.0034, 0, 0 )
+light_energy = 10.0
+omni_range = 20.0
+
+[node name="OmniLight4" type="OmniLight" parent="skylines/OmniLight5"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 93.8096, 0, 0 )
+light_energy = 10.0
+omni_range = 20.0
+
+[node name="OmniLight6" type="OmniLight" parent="skylines"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -150, 140, 51.4111 )
+light_energy = 10.0
+omni_range = 20.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="skylines/OmniLight6"]
+autoplay = "sweep"
+anims/sweep = SubResource( 12 )
+
+[node name="OmniLight3" type="OmniLight" parent="skylines/OmniLight6"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 50.0034, 0, 0 )
+light_energy = 10.0
+omni_range = 20.0
+
+[node name="OmniLight4" type="OmniLight" parent="skylines/OmniLight6"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 93.8096, 0, 0 )
+light_energy = 10.0
+omni_range = 20.0
+
+[node name="OmniLight7" type="OmniLight" parent="skylines"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 150, 140, 401.423 )
+light_energy = 10.0
+omni_range = 20.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="skylines/OmniLight7"]
+autoplay = "sweep"
+anims/sweep = SubResource( 13 )
+
+[node name="OmniLight3" type="OmniLight" parent="skylines/OmniLight7"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 50.0034, 0, 0 )
+light_energy = 10.0
+omni_range = 20.0
+
+[node name="OmniLight4" type="OmniLight" parent="skylines/OmniLight7"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 93.8096, 0, 0 )
+light_energy = 10.0
+omni_range = 20.0
+
+[node name="light_twirl" type="Spatial" parent="."]
+transform = Transform( 0.844169, 0.536077, 4.59092e-09, -0.519546, 0.818137, 0.246424, 0.132102, -0.208023, 0.969162, -8.15989, 9.53674e-07, -73.0679 )
+
+[node name="OmniLight" type="OmniLight" parent="light_twirl"]
+transform = Transform( 1, 4.84288e-08, 0, -7.63685e-08, 1, 0, 0, 2.98023e-08, 1, -1.37405, -0.872568, 5.06464 )
+light_color = Color( 0.996078, 1, 0.909804, 1 )
+light_energy = 2.0
+
+[node name="OmniLight3" type="OmniLight" parent="light_twirl"]
+transform = Transform( 1, 4.84288e-08, 0, -7.63685e-08, 1, 0, 0, 2.98023e-08, 1, -5.38194, -0.87257, 3.63136 )
+light_color = Color( 0.996078, 1, 0.909804, 1 )
+light_energy = 2.0
+
+[node name="OmniLight4" type="OmniLight" parent="light_twirl"]
+transform = Transform( 1, 4.84288e-08, 0, -7.63685e-08, 1, 0, 0, 2.98023e-08, 1, -0.365437, -0.872571, -3.53506 )
+light_color = Color( 0.996078, 1, 0.909804, 1 )
+light_energy = 2.0
+
+[node name="OmniLight5" type="OmniLight" parent="light_twirl"]
+transform = Transform( 1, 4.84288e-08, 0, -7.63685e-08, 1, 0, 0, 2.98023e-08, 1, 3.43568, -0.872568, 1.31463 )
+light_color = Color( 0.996078, 1, 0.909804, 1 )
+light_energy = 2.0
+
+[node name="OmniLight2" type="OmniLight" parent="light_twirl"]
+transform = Transform( 1, 4.84288e-08, 0, -7.63685e-08, 1, 0, 0, 2.98023e-08, 1, -6.73746, -0.87257, -1.61134 )
+light_color = Color( 0.996078, 1, 0.909804, 1 )
+light_energy = 2.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="light_twirl"]
+autoplay = "twirl"
+anims/twirl = SubResource( 3 )
+
+[node name="light_tube_trains" type="Spatial" parent="."]
+
+[node name="light_tube_train_1" parent="light_tube_trains" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7, -29.5, -75 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="light_tube_trains/light_tube_train_1"]
+autoplay = "light_tube_train"
+anims/light_tube_train = SubResource( 14 )
+
+[node name="light_tube_train_5" parent="light_tube_trains" instance=ExtResource( 6 )]
+transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 10, -15, -23.8125, -110 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="light_tube_trains/light_tube_train_5"]
+autoplay = "light_tube_train"
+anims/light_tube_train = SubResource( 15 )
+
+[node name="light_tube_train_2" parent="light_tube_trains" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, -2.18557e-07, 1, 0, -5, -4.37114e-08, 3.77599, -3.067, -32.4127 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="light_tube_trains/light_tube_train_2"]
+autoplay = "light_tube_train"
+anims/light_tube_train = SubResource( 16 )
+
+[node name="light_tube_train_3" parent="light_tube_trains" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, -2.18557e-07, 1, 0, -5, -4.37114e-08, -0.291, -5.067, -32.5 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="light_tube_trains/light_tube_train_3"]
+autoplay = "light_tube_train"
+anims/light_tube_train = SubResource( 17 )
+
+[node name="light_tube_train_4" parent="light_tube_trains" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, -2.18557e-07, 1, 0, -5, -4.37114e-08, -3.5841, 6.27113, -31.3058 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="light_tube_trains/light_tube_train_4"]
+autoplay = "light_tube_train"
+anims/light_tube_train = SubResource( 18 )
+
+[node name="light_tube_train_6" parent="light_tube_trains" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, -2.18557e-07, 1, 0, -5, -4.37114e-08, 13, 6.271, -30 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="light_tube_trains/light_tube_train_6"]
+autoplay = "light_tube_train"
+anims/light_tube_train = SubResource( 19 )
+
+[node name="wide_group_top_1" type="Spatial" parent="light_tube_trains"]
+
+[node name="light_tube_train_wide_separation" parent="light_tube_trains/wide_group_top_1" instance=ExtResource( 8 )]
+transform = Transform( -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 69.851, 6.271, -94.481 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="light_tube_trains/wide_group_top_1"]
+autoplay = "light_tube_train"
+anims/light_tube_train = SubResource( 26 )
+
+[node name="wide_group_top_2" type="Spatial" parent="light_tube_trains"]
+
+[node name="light_tube_train_wide_separation" parent="light_tube_trains/wide_group_top_2" instance=ExtResource( 8 )]
+transform = Transform( -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 69.101, 6.271, -81.685 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="light_tube_trains/wide_group_top_2"]
+autoplay = "light_tube_train"
+anims/light_tube_train = SubResource( 25 )
+
+[node name="wide_group_top_3" type="Spatial" parent="light_tube_trains"]
+
+[node name="light_tube_train_wide_separation" parent="light_tube_trains/wide_group_top_3" instance=ExtResource( 8 )]
+transform = Transform( -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 69.101, 6.271, -81.685 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="light_tube_trains/wide_group_top_3"]
+autoplay = "light_tube_train"
+anims/light_tube_train = SubResource( 30 )
+
+[node name="wide_group_top_4" type="Spatial" parent="light_tube_trains"]
+
+[node name="light_tube_train_wide_separation" parent="light_tube_trains/wide_group_top_4" instance=ExtResource( 8 )]
+transform = Transform( -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 70.2509, 6.271, -124.161 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="light_tube_trains/wide_group_top_4"]
+autoplay = "light_tube_train"
+anims/light_tube_train = SubResource( 27 )
+
+[node name="wide_group_bottom_1" type="Spatial" parent="light_tube_trains"]
+
+[node name="light_tube_train_wide_separation" parent="light_tube_trains/wide_group_bottom_1" instance=ExtResource( 8 )]
+transform = Transform( -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 64.5804, -6.231, -81.685 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="light_tube_trains/wide_group_bottom_1"]
+autoplay = "light_tube_train"
+anims/light_tube_train = SubResource( 28 )
+
+[node name="wide_group_bottom_2" type="Spatial" parent="light_tube_trains"]
+
+[node name="light_tube_train_wide_separation" parent="light_tube_trains/wide_group_bottom_2" instance=ExtResource( 8 )]
+transform = Transform( -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 56.133, -12.431, -124.161 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="light_tube_trains/wide_group_bottom_2"]
+autoplay = "light_tube_train"
+anims/light_tube_train = SubResource( 29 )
+
+[node name="double_pyramids_1" parent="." instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.08091, -3.30773, -87.1156 )
+
+[node name="double_pyramids_2" parent="." instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.02556, -3.30773, -87.1156 )
+
+[node name="double_pyramids_3" parent="." instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.9308, -1.62623, -87.1156 )
+
+[node name="double_pyramids_4" type="Spatial" parent="."]
+transform = Transform( -8.74228e-09, 0, -0.2, 0, 0.2, 0, 0.2, 0, -8.74228e-09, -3.78779, 0.876784, -61.5071 )
+
+[node name="double_pyramid_1" parent="double_pyramids_4" instance=ExtResource( 7 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0 )
+
+[node name="double_pyramid_2" parent="double_pyramids_4" instance=ExtResource( 7 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, -2 )
+
+[node name="double_pyramid_3" parent="double_pyramids_4" instance=ExtResource( 7 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, -4 )
+
+[node name="double_pyramid_4" parent="double_pyramids_4" instance=ExtResource( 7 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, -6 )
+
+[node name="double_pyramid_5" parent="double_pyramids_4" instance=ExtResource( 7 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, -8 )
+
+[node name="double_pyramid_6" parent="double_pyramids_4" instance=ExtResource( 7 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, -10 )
+
+[node name="double_pyramid_7" parent="double_pyramids_4" instance=ExtResource( 7 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, -15 )
+
+[node name="double_pyramid_8" parent="double_pyramids_4" instance=ExtResource( 7 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, -17 )
+
+[node name="double_pyramid_9" parent="double_pyramids_4" instance=ExtResource( 7 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, -19 )
+
+[node name="double_pyramid_10" parent="double_pyramids_4" instance=ExtResource( 7 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, -21 )
+
+[node name="double_pyramid_11" parent="double_pyramids_4" instance=ExtResource( 7 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, -23 )
+
+[node name="double_pyramid_12" parent="double_pyramids_4" instance=ExtResource( 7 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, -25 )
+
+[node name="menu" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -60.9509 )
+
+[node name="title" type="CSGMesh" parent="menu"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.135729, 0 )
+mesh = SubResource( 31 )
+
+[node name="title2" type="CSGMesh" parent="menu/title"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0591164 )
+mesh = SubResource( 35 )
+
+[node name="title3" type="CSGMesh" parent="menu/title"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0938416 )
+mesh = SubResource( 35 )
+
+[node name="title4" type="CSGMesh" parent="menu/title"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.128567 )
+mesh = SubResource( 35 )
+
+[node name="lights" type="Spatial" parent="menu"]
+transform = Transform( 0.767076, 0.641557, 0, -0.641557, 0.767076, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="SpotLight" type="SpotLight" parent="menu/lights"]
+transform = Transform( -0.67088, 0, -0.741566, 0, 1, 0, 0.741566, 0, -0.67088, -0.700336, 0, -0.544357 )
+light_color = Color( 1, 0.827451, 0.462745, 1 )
+light_energy = 2.0
+spot_range = 1.72085
+
+[node name="SpotLight2" type="SpotLight" parent="menu/lights"]
+transform = Transform( -0.741566, 0, 0.67088, 0, 1, 0, -0.67088, 0, -0.741566, 0.676495, 0, -0.544357 )
+light_color = Color( 0.698039, 0.780392, 1, 1 )
+light_energy = 3.0
+spot_range = 1.72085
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="menu/lights"]
+autoplay = "menu_lights"
+anims/menu_lights = SubResource( 36 )
+
+[node name="vertical_slice" type="StaticBody" parent="menu"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0879396, 0 )
+
+[node name="text" type="CSGMesh" parent="menu/vertical_slice"]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, -0.0146586, 0 )
+mesh = SubResource( 33 )
+material = SubResource( 43 )
+
+[node name="collider" type="CollisionShape" parent="menu/vertical_slice"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0230113, 0 )
+shape = SubResource( 41 )
+
+[node name="exit" type="StaticBody" parent="menu"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.249315, 0 )
+
+[node name="text" type="CSGMesh" parent="menu/exit"]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, -0.0170361, 0 )
+mesh = SubResource( 34 )
+material = SubResource( 44 )
+
+[node name="collider" type="CollisionShape" parent="menu/exit"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.015015, 0 )
+shape = SubResource( 42 )

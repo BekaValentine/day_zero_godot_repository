@@ -1,0 +1,97 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://levels/main_menu/models/light_tube/light_tube.tscn" type="PackedScene" id=1]
+
+[node name="light_tube_train_wide_separation" type="Spatial"]
+
+[node name="group_1" type="Spatial" parent="."]
+
+[node name="light_tube_1" parent="group_1" instance=ExtResource( 1 )]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0 )
+
+[node name="light_tube_2" parent="group_1" instance=ExtResource( 1 )]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 3, 0 )
+
+[node name="light_tube_3" parent="group_1" instance=ExtResource( 1 )]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 6, 0 )
+
+[node name="light_tube_4" parent="group_1" instance=ExtResource( 1 )]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 9, 0 )
+
+[node name="light_tube_5" parent="group_1" instance=ExtResource( 1 )]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 12, 0 )
+
+[node name="light_tube_6" parent="group_1" instance=ExtResource( 1 )]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 15, 0 )
+
+[node name="light_tube_7" parent="group_1" instance=ExtResource( 1 )]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 18, 0 )
+
+[node name="light_tube_8" parent="group_1" instance=ExtResource( 1 )]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 21, 0 )
+
+[node name="light_tube_9" parent="group_1" instance=ExtResource( 1 )]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 24, 0 )
+
+[node name="light_tube_10" parent="group_1" instance=ExtResource( 1 )]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 27, 0 )
+
+[node name="light_tube_11" parent="group_1" instance=ExtResource( 1 )]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 30, 0 )
+
+[node name="light_tube_12" parent="group_1" instance=ExtResource( 1 )]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 33, 0 )
+
+[node name="light_tube_13" parent="group_1" instance=ExtResource( 1 )]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 36, 0 )
+
+[node name="light_tube_14" parent="group_1" instance=ExtResource( 1 )]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 39, 0 )
+
+[node name="light_tube_15" parent="group_1" instance=ExtResource( 1 )]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 42, 0 )
+
+[node name="light_tube_16" parent="group_1" instance=ExtResource( 1 )]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 45, 0 )
+
+[node name="light_tube_17" parent="group_1" instance=ExtResource( 1 )]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 48, 0 )
+
+[node name="light_tube_18" parent="group_1" instance=ExtResource( 1 )]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 51, 0 )
+
+[node name="light_tube_19" parent="group_1" instance=ExtResource( 1 )]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 54, 0 )
+
+[node name="light_tube_20" parent="group_1" instance=ExtResource( 1 )]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 57, 0 )
+
+[node name="light_tube_21" parent="group_1" instance=ExtResource( 1 )]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 60, 0 )
+
+[node name="light_tube_22" parent="group_1" instance=ExtResource( 1 )]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 63, 0 )
+
+[node name="light_tube_23" parent="group_1" instance=ExtResource( 1 )]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 66, 0 )
+
+[node name="light_tube_24" parent="group_1" instance=ExtResource( 1 )]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 69, 0 )
+
+[node name="light_tube_25" parent="group_1" instance=ExtResource( 1 )]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 72, 0 )
+
+[node name="light_tube_26" parent="group_1" instance=ExtResource( 1 )]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 75, 0 )
+
+[node name="light_tube_27" parent="group_1" instance=ExtResource( 1 )]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 78, 0 )
+
+[node name="light_tube_28" parent="group_1" instance=ExtResource( 1 )]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 81, 0 )
+
+[node name="light_tube_29" parent="group_1" instance=ExtResource( 1 )]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 84, 0 )
+
+[node name="light_tube_30" parent="group_1" instance=ExtResource( 1 )]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 87, 0 )

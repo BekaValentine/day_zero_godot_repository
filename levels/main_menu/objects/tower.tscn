@@ -1,0 +1,157 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://levels/main_menu/models/tower/tower.tscn" type="PackedScene" id=1]
+
+[node name="tower" type="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.98943, 0.228184, -99.0307 )
+
+[node name="tower_structure" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.506335, 0, -0.862337, 0, 1, 0, 0.862337, 0, 0.506335, 0.241082, -2.24165, -4.71062 )
+
+[node name="OmniLight" type="OmniLight" parent="."]
+transform = Transform( 0.330173, 0.563527, -0.757247, -0.337332, 0.819701, 0.462922, 0.881586, 0.102599, 0.460739, -3.27167, 3.38988, -3.90333 )
+light_color = Color( 0.223529, 0.196078, 0.368627, 1 )
+light_energy = 5.0
+omni_range = 7.04264
+
+[node name="OmniLight2" type="OmniLight" parent="."]
+transform = Transform( 0.330173, 0.563527, -0.757247, -0.337332, 0.819701, 0.462922, 0.881586, 0.102599, 0.460739, -5.24555, -4.80309, -3.88627 )
+light_color = Color( 0.223529, 0.196078, 0.368627, 1 )
+light_energy = 5.0
+omni_range = 9.35983
+
+[node name="OmniLight3" type="OmniLight" parent="."]
+transform = Transform( 0.330173, 0.563527, -0.757247, -0.337332, 0.819701, 0.462922, 0.881586, 0.102599, 0.460739, 3.6498, 2.02663, -4.91922 )
+light_color = Color( 0.247059, 0.2, 0.254902, 1 )
+light_energy = 7.0
+
+[node name="OmniLight4" type="OmniLight" parent="."]
+transform = Transform( 0.330173, 0.563527, -0.757247, -0.337332, 0.819701, 0.462922, 0.881586, 0.102599, 0.460739, 1.18901, 1.71727, -1.83995 )
+light_color = Color( 0.388235, 0.32549, 0.298039, 1 )
+light_energy = 5.0
+omni_range = 3.0
+
+[node name="OmniLight5" type="OmniLight" parent="."]
+transform = Transform( 0.330173, 0.563527, -0.757247, -0.337332, 0.819701, 0.462922, 0.881586, 0.102599, 0.460739, 0.441245, 2.2015, -3.55749 )
+light_color = Color( 1, 0.7445, 0.27, 1 )
+light_energy = 5.0
+omni_range = 0.8
+
+[node name="OmniLight6" type="OmniLight" parent="OmniLight5"]
+transform = Transform( 1, -7.45058e-09, -2.98023e-08, 1.49012e-08, 1, 1.11759e-08, 0, 1.11759e-08, 1, 0, 0, 0 )
+light_color = Color( 1, 0.305882, 0, 1 )
+light_energy = 16.0
+omni_range = 0.4
+
+[node name="OmniLight6" type="OmniLight" parent="."]
+transform = Transform( 0.330173, 0.563527, -0.757247, -0.337332, 0.819701, 0.462922, 0.881586, 0.102599, 0.460739, 0.635566, 3.22936, -4.38904 )
+light_color = Color( 1, 0.7445, 0.27, 1 )
+light_energy = 5.0
+omni_range = 0.8
+
+[node name="OmniLight6" type="OmniLight" parent="OmniLight6"]
+transform = Transform( 1, -7.45058e-09, -2.98023e-08, 1.49012e-08, 1, 1.11759e-08, 0, 1.11759e-08, 1, 0, 0, 0 )
+light_color = Color( 1, 0.305882, 0, 1 )
+light_energy = 16.0
+omni_range = 0.4
+
+[node name="OmniLight7" type="OmniLight" parent="."]
+transform = Transform( 0.330173, 0.563527, -0.757247, -0.337332, 0.819701, 0.462922, 0.881586, 0.102599, 0.460739, 0.635566, 4.03351, -4.38904 )
+light_color = Color( 1, 0.7445, 0.27, 1 )
+light_energy = 5.0
+omni_range = 0.8
+
+[node name="OmniLight6" type="OmniLight" parent="OmniLight7"]
+transform = Transform( 1, -7.45058e-09, -2.98023e-08, 1.49012e-08, 1, 1.11759e-08, 0, 1.11759e-08, 1, 0, 0, 0 )
+light_color = Color( 1, 0.305882, 0, 1 )
+light_energy = 16.0
+omni_range = 0.4
+
+[node name="OmniLight8" type="OmniLight" parent="."]
+transform = Transform( 0.330173, 0.563527, -0.757247, -0.337332, 0.819701, 0.462922, 0.881586, 0.102599, 0.460739, 0.683266, 1.24153, -4.37575 )
+light_color = Color( 1, 0.7445, 0.27, 1 )
+light_energy = 5.0
+omni_range = 0.8
+
+[node name="OmniLight6" type="OmniLight" parent="OmniLight8"]
+transform = Transform( 1, -7.45058e-09, -2.98023e-08, 1.49012e-08, 1, 1.11759e-08, 0, 1.11759e-08, 1, 0, 0, 0 )
+light_color = Color( 1, 0.305882, 0, 1 )
+light_energy = 16.0
+omni_range = 0.4
+
+[node name="OmniLight9" type="OmniLight" parent="."]
+transform = Transform( 0.330173, 0.563527, -0.757247, -0.337332, 0.819701, 0.462922, 0.881586, 0.102599, 0.460739, 0.683266, 0.564443, -4.37575 )
+light_color = Color( 1, 0.7445, 0.27, 1 )
+light_energy = 5.0
+omni_range = 0.8
+
+[node name="OmniLight6" type="OmniLight" parent="OmniLight9"]
+transform = Transform( 1, -7.45058e-09, -2.98023e-08, 1.49012e-08, 1, 1.11759e-08, 0, 1.11759e-08, 1, 0, 0, 0 )
+light_color = Color( 1, 0.305882, 0, 1 )
+light_energy = 16.0
+omni_range = 0.4
+
+[node name="OmniLight10" type="OmniLight" parent="."]
+transform = Transform( 0.330173, 0.563527, -0.757247, -0.337332, 0.819701, 0.462922, 0.881586, 0.102599, 0.460739, 0.683266, -0.0190052, -4.37575 )
+light_color = Color( 1, 0.7445, 0.27, 1 )
+light_energy = 5.0
+omni_range = 0.8
+
+[node name="OmniLight6" type="OmniLight" parent="OmniLight10"]
+transform = Transform( 1, -7.45058e-09, -2.98023e-08, 1.49012e-08, 1, 1.11759e-08, 0, 1.11759e-08, 1, 0, 0, 0 )
+light_color = Color( 1, 0.305882, 0, 1 )
+light_energy = 16.0
+omni_range = 0.4
+
+[node name="OmniLight11" type="OmniLight" parent="."]
+transform = Transform( 0.330173, 0.563527, -0.757247, -0.337332, 0.819701, 0.462922, 0.881586, 0.102599, 0.460739, 0.683266, -3.14433, -4.37575 )
+light_color = Color( 1, 0.7445, 0.27, 1 )
+light_energy = 5.0
+omni_range = 0.8
+
+[node name="OmniLight6" type="OmniLight" parent="OmniLight11"]
+transform = Transform( 1, -7.45058e-09, -2.98023e-08, 1.49012e-08, 1, 1.11759e-08, 0, 1.11759e-08, 1, 0, 0, 0 )
+light_color = Color( 1, 0.305882, 0, 1 )
+light_energy = 16.0
+omni_range = 0.4
+
+[node name="OmniLight12" type="OmniLight" parent="."]
+transform = Transform( 0.330173, 0.563527, -0.757247, -0.337332, 0.819701, 0.462922, 0.881586, 0.102599, 0.460739, 0.683266, -3.82142, -4.37575 )
+light_color = Color( 1, 0.7445, 0.27, 1 )
+light_energy = 5.0
+omni_range = 0.8
+
+[node name="OmniLight6" type="OmniLight" parent="OmniLight12"]
+transform = Transform( 1, -7.45058e-09, -2.98023e-08, 1.49012e-08, 1, 1.11759e-08, 0, 1.11759e-08, 1, 0, 0, 0 )
+light_color = Color( 1, 0.305882, 0, 1 )
+light_energy = 16.0
+omni_range = 0.4
+
+[node name="OmniLight13" type="OmniLight" parent="."]
+transform = Transform( 0.330173, 0.563527, -0.757247, -0.337332, 0.819701, 0.462922, 0.881586, 0.102599, 0.460739, 0.683266, -4.40487, -4.37575 )
+light_color = Color( 1, 0.7445, 0.27, 1 )
+light_energy = 5.0
+omni_range = 0.8
+
+[node name="OmniLight6" type="OmniLight" parent="OmniLight13"]
+transform = Transform( 1, -7.45058e-09, -2.98023e-08, 1.49012e-08, 1, 1.11759e-08, 0, 1.11759e-08, 1, 0, 0, 0 )
+light_color = Color( 1, 0.305882, 0, 1 )
+light_energy = 16.0
+omni_range = 0.4
+
+[node name="OmniLight14" type="OmniLight" parent="."]
+transform = Transform( 0.330173, 0.563527, -0.757247, -0.337332, 0.819701, 0.462922, 0.881586, 0.102599, 0.460739, 0.825474, -4.15138, -4.79826 )
+light_color = Color( 1, 0.305882, 0, 1 )
+light_energy = 5.0
+omni_range = 1.26
+
+[node name="OmniLight15" type="OmniLight" parent="."]
+transform = Transform( 0.330173, 0.563527, -0.757247, -0.337332, 0.819701, 0.462922, 0.881586, 0.102599, 0.460739, -1.87082, -0.237695, -5.28645 )
+light_color = Color( 1, 0.305882, 0, 1 )
+light_energy = 5.0
+omni_range = 2.1909
+
+[node name="OmniLight16" type="OmniLight" parent="."]
+transform = Transform( 0.330173, 0.563527, -0.757247, -0.337332, 0.819701, 0.462922, 0.881586, 0.102599, 0.460739, 1.64301, -6.00396, -5.19161 )
+light_color = Color( 1, 0.305882, 0, 1 )
+omni_range = 4.11141
