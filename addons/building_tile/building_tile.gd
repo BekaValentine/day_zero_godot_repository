@@ -52,22 +52,23 @@ func import_building_tiles():
 		if file_name == "":
 			break
 		
-		if file_name.length() > 5 and file_name.ends_with('.gltf'):
+		if file_name.length() > 5:
 			part_name = file_name.substr(0, file_name.length() - 5)
 			extension = file_name.substr(file_name.length() - 4)
 
-			full_path = self.current_path + file_name
-			print("Building Tiles: Importing " + full_path)
-			tile = ResourceLoader.load(full_path).instance()
-			extracted = Spatial.new()
-			extracted.name = part_name
-			packed = PackedScene.new()
-			extracted.add_child(tile)
-			tile.owner = extracted
-			packed.pack(extracted)
-			packed_destination = destination + "/" + part_name + ".tscn"
-			print("Building Tiles: Saving to " + packed_destination)
-			ResourceSaver.save(packed_destination, packed)
+			if extension == "gltf":
+				full_path = self.current_path + file_name
+				print("Building Tiles: Importing " + full_path)
+				tile = ResourceLoader.load(full_path).instance()
+				extracted = Spatial.new()
+				extracted.name = part_name
+				packed = PackedScene.new()
+				extracted.add_child(tile)
+				tile.owner = extracted
+				packed.pack(extracted)
+				packed_destination = destination + "/" + part_name + ".tscn"
+				print("Building Tiles: Saving to " + packed_destination)
+				ResourceSaver.save(packed_destination, packed)
 
 	dir.list_dir_end()
 
