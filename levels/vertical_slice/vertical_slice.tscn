@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://infrastructure/player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://objects/traffic_barrier.tscn" type="PackedScene" id=2]
@@ -6,7 +6,11 @@
 [ext_resource path="res://levels/vertical_slice/buildings/building_22/building_22.tscn" type="PackedScene" id=4]
 [ext_resource path="res://levels/vertical_slice/buildings/bauhaus_building/bauhaus_building.tscn" type="PackedScene" id=5]
 [ext_resource path="res://levels/vertical_slice/buildings/building_23/building_23.tscn" type="PackedScene" id=6]
-[ext_resource path="res://environments/night_environment.tres" type="Environment" id=7]
+[ext_resource path="res://environments/daytime_environment.tres" type="Environment" id=7]
+[ext_resource path="res://levels/vertical_slice/buildings/generic_building/metal_panels/test.tscn" type="PackedScene" id=8]
+[ext_resource path="res://levels/vertical_slice/buildings/building_3/building_3.tscn" type="PackedScene" id=9]
+[ext_resource path="res://levels/vertical_slice/buildings/building_9/building_9.tscn" type="PackedScene" id=10]
+[ext_resource path="res://levels/vertical_slice/buildings/building_7/building_7.tscn" type="PackedScene" id=11]
 
 [sub_resource type="SpatialMaterial" id=2]
 albedo_color = Color( 0.266667, 1, 0, 1 )
@@ -30,14 +34,25 @@ albedo_color = Color( 0.835294, 0.470588, 0, 1 )
 
 [node name="ground_plane" parent="." instance=ExtResource( 3 )]
 
-[node name="building_22" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -92.6, 0, 101.1 )
+[node name="buildings" type="Spatial" parent="."]
 
-[node name="building_23" parent="." instance=ExtResource( 6 )]
+[node name="building_23" parent="buildings" instance=ExtResource( 6 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 97.5, 0.15, 103.5 )
 
-[node name="building_25" parent="." instance=ExtResource( 5 )]
+[node name="building_22" parent="buildings" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -92.6, 0, 101.1 )
+
+[node name="building_25" parent="buildings" instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -105, 0.15, 0 )
+
+[node name="building_9" parent="buildings" instance=ExtResource( 10 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 59.335, 0.15, -20 )
+
+[node name="building_3" parent="buildings" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -41.36, 0.15, 62.495 )
+
+[node name="building_7" parent="buildings" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 59, 0.15, 54 )
 
 [node name="traffic_barriers" type="Spatial" parent="."]
 
@@ -279,6 +294,7 @@ depth = 5.0
 material = SubResource( 6 )
 
 [node name="other_buildings" type="Spatial" parent="reference_marks"]
+visible = false
 
 [node name="other_building_1" type="CSGBox" parent="reference_marks/other_buildings"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.061, 22, 58.6934 )
@@ -444,6 +460,7 @@ depth = 17.2291
 
 [node name="other_building_7" type="CSGBox" parent="reference_marks/other_buildings"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 58.7767, 26.469, 56.3812 )
+visible = false
 width = 17.2655
 height = 53.1856
 depth = 22.0892
@@ -504,15 +521,16 @@ depth = 17.0
 
 [node name="other_building_9" type="CSGBox" parent="reference_marks/other_buildings"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 58.9099, 8.44943, -18.085 )
+visible = false
 width = 17.6992
 height = 15.5719
 depth = 22.0
 
 [node name="other_building_10" type="CSGBox" parent="reference_marks/other_buildings"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 58.7767, 13.5569, -49.4417 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 58.7767, 13.5569, -51.247 )
 width = 17.5661
 height = 25.6572
-depth = 40.0
+depth = 36.7617
 
 [node name="other_building_2" type="CSGBox" parent="reference_marks/other_buildings"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -26.073, 20, 58.6078 )
@@ -522,12 +540,14 @@ depth = 17.4981
 
 [node name="other_building_3" type="CSGBox" parent="reference_marks/other_buildings"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -40.741, 10, 61.0904 )
+visible = false
 width = 16.0
 height = 20.0
 depth = 12.3617
 
 [node name="other_building_4" type="CSGBox" parent="reference_marks/other_buildings"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -58.1845, 5, 61.2616 )
+visible = false
 width = 18.6003
 height = 11.0941
 depth = 12.5329
@@ -557,7 +577,7 @@ height = 1.0
 depth = 1.0
 
 [node name="player" parent="." instance=ExtResource( 1 )]
-transform = Transform( -0.70989, 0, 0.704312, 0, 1, 0, -0.704312, 0, -0.70989, -93.6415, 11.1523, 48.68 )
+transform = Transform( 0.999921, 0, -0.0125662, 0, 1, 0, 0.0125662, 0, 0.999921, 76.5394, 0, 70.6291 )
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource( 7 )
@@ -570,3 +590,8 @@ light_energy = 0.4
 shadow_bias = -0.5
 shadow_reverse_cull_face = true
 directional_shadow_mode = 0
+
+[node name="test_metal_panels" type="Spatial" parent="."]
+
+[node name="test" parent="test_metal_panels" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -66.351, 0.15, 65.887 )

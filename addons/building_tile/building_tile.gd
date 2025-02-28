@@ -70,34 +70,5 @@ func import_building_tiles():
 				print("Building Tiles: Saving to " + packed_destination)
 				ResourceSaver.save(packed_destination, packed)
 
-	dir.list_dir_end()
-
-	# var glb_instance = res.instance()
-
-	# var part_names = [ "corner", "middle", "door", "left_edge", "right_edge", "back_corner", "back_middle", "back_door", "top" ]
-	# var sub_meshes = {}
-	# for child in glb_instance.get_children():
-	# 	var name = child.name.to_lower().replace(" ", "_")
-	# 	for part_name in part_names:
-	# 		var index = name.find(part_name)
-	# 		if index == 0:
-	# 			if not (part_name in sub_meshes):
-	# 				sub_meshes[part_name] = []
-	# 			sub_meshes[part_name].append(child)
-	
-	# for part_name in sub_meshes:
-		# var extracted = Spatial.new()
-		# extracted.name = part_name
-	# 	var parts = sub_meshes[part_name]
-	# 	var packed = PackedScene.new()
-	# 	for part in parts:
-	# 		part.get_parent().remove_child(part)
-	# 		extracted.add_child(part)
-	# 		part.owner = extracted
-	# 	packed.pack(extracted);
-
-	# 	var packed_destination = destination + "/" + part_name + ".tscn"
-	# 	print("Building Tiles: Saving to " + packed_destination)
-	# 	ResourceSaver.save(packed_destination, packed)
-	
+	dir.list_dir_end()	
 	print("Building Tiles: Done!")

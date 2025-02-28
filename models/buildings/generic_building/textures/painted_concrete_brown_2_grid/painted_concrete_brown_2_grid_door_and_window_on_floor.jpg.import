@@ -1,0 +1,35 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/painted_concrete_brown_2_grid_door_and_window_on_floor.jpg-831a7dbd67b52f5ddf26d48301a17cd1.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://models/buildings/generic_building/textures/painted_concrete_brown_2_grid/painted_concrete_brown_2_grid_door_and_window_on_floor.jpg"
+dest_files=[ "res://.import/painted_concrete_brown_2_grid_door_and_window_on_floor.jpg-831a7dbd67b52f5ddf26d48301a17cd1.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+process/normal_map_invert_y=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

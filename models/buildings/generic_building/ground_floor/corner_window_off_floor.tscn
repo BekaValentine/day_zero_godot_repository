@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://models/buildings/generic_building/ground_floor/corner_window_off_floor.gltf" type="PackedScene" id=1]
+[ext_resource path="res://models/buildings/generic_building/ground_floor/base_models/corner_window_off_floor.gltf" type="PackedScene" id=1]
 
 [node name="corner_window_off_floor" type="Spatial"]
 

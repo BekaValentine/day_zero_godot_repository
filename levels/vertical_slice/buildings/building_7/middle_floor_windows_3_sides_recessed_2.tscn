@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://objects/buildings/generic_building/brick_1_pattern_2_dull_green_quad/middle_floor/left_edge.tscn" type="PackedScene" id=1]
+[ext_resource path="res://objects/buildings/generic_building/brick_1_pattern_2_dull_green_quad/middle_floor/middle.tscn" type="PackedScene" id=2]
+[ext_resource path="res://objects/buildings/generic_building/brick_1_pattern_2_dull_green_quad/middle_floor/corner.tscn" type="PackedScene" id=3]
+[ext_resource path="res://objects/buildings/generic_building/brick_1_pattern_2_dull_green_quad/middle_floor/back_middle.tscn" type="PackedScene" id=4]
+[ext_resource path="res://objects/buildings/generic_building/brick_1_pattern_2_dull_green_quad/middle_floor/right_edge.tscn" type="PackedScene" id=5]
+
+[node name="middle_floor" type="Spatial"]
+
+[node name="left_edge" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5, 0, 2.5 )
+
+[node name="middle" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0, 2.5 )
+
+[node name="middle5" parent="." instance=ExtResource( 2 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7.5, 0, -2.5 )
+
+[node name="middle6" parent="." instance=ExtResource( 2 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2.5, 0, -12.5 )
+
+[node name="corner" parent="." instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7.5, 0, 2.5 )
+
+[node name="corner2" parent="." instance=ExtResource( 3 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 7.5, 0, -12.5 )
+
+[node name="right_edge" parent="." instance=ExtResource( 5 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -2.5, 0, -12.5 )
+
+[node name="back_middle3" parent="." instance=ExtResource( 4 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -7.5, 0, -7.5 )

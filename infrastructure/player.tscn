@@ -85,10 +85,10 @@ anchor_bottom = 1.0
 mouse_filter = 2
 
 [node name="reticle" type="TextureRect" parent="reticle_center"]
-margin_left = 955.0
-margin_top = 535.0
-margin_right = 964.0
-margin_bottom = 544.0
+margin_left = 795.0
+margin_top = 445.0
+margin_right = 804.0
+margin_bottom = 454.0
 mouse_filter = 2
 texture = SubResource( 8 )
 
@@ -174,7 +174,7 @@ mouse_filter = 2
 stretch = true
 
 [node name="hold_viewport" type="Viewport" parent="hold_layer/hold_viewport_container"]
-size = Vector2( 1920, 1080 )
+size = Vector2( 1600, 900 )
 transparent_bg = true
 handle_input_locally = false
 render_target_update_mode = 3
@@ -207,7 +207,7 @@ mouse_filter = 2
 stretch = true
 
 [node name="focus_object_viewport" type="Viewport" parent="focus_layer/focus_object_viewport_container"]
-size = Vector2( 1920, 1080 )
+size = Vector2( 1600, 900 )
 transparent_bg = true
 handle_input_locally = false
 render_target_update_mode = 3
